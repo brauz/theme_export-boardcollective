@@ -495,13 +495,15 @@ for size, we use it to display a size chart (if applicable)
   {%- comment -%}
   Brauz app custom code part2 starts. Do not modify!!! details in WR-212
   {%- endcomment -%}
+  <div id="brauz-find-in-store-product-page"></div>
+  <script src="https://d3aq2u4yw77ivo.cloudfront.net/find-in-store/shopify/boardcollective/find-in-store.shopify.boardcollective.prod.js" async></script>
   <div
-  id="brauz-click-collect-product-page"
-  data-id="eyJncm91cF9udW1iZXIiOiJXUlBMX21HUUQiLCJzaG9waWZ5X2RvbWFpbiI6ImJvYXJkY29sbGVjdGl2ZS5teXNob3BpZnkuY29tIn0="
-  data-cvi="{{current_variant.id}}"
-  data-hodv="{{product.has_only_default_variant}}"
+    id="brauz-find-in-store-config-product-page"
+    data-sd="{{ shop.permanent_domain }}"
+    data-cvi="{{ product.first_available_variant.id }}"
+    data-hodv="{{ product.has_only_default_variant }}"
+    style="display: none; width: 0;"
   ></div>
-  <script src="https://d3aq2u4yw77ivo.cloudfront.net/click-and-collect/board-collective/1.0/click_and_collect.shopify.boardcollective.prod.js" async></script>
   {%- comment -%}
   Brauz app custom code part2 end. details in WR-212
   {%- endcomment -%}
