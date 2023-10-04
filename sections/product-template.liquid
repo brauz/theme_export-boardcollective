@@ -330,9 +330,15 @@
             {%- comment -%}
             Brauz code
             {%- endcomment -%}
-            <button type="button" class="ProductForm__AddToCart Button Button--secondary Button--full" onclick="window.Brauz_open_store_selector_dialog()">  Find in Store</button>
-            <div  id="brauz-click-collect-product-page"  data-id="eyJncm91cF9udW1iZXIiOiJXUlBMX21HUUQiLCJzaG9waWZ5X2RvbWFpbiI6ImJvYXJkY29sbGVjdGl2ZS5teXNob3BpZnkuY29tIn0="  data-cvi="{{current_variant.id}}"  data-hodv="{{product.has_only_default_variant}}"></div>
-            <script src="https://d3aq2u4yw77ivo.cloudfront.net/click-and-collect/board-collective/1.0/click_and_collect.shopify.boardcollective.prod.js" async></script>
+            <div id="brauz-find-in-store-product-page"></div>
+            <script src="https://d3aq2u4yw77ivo.cloudfront.net/find-in-store/shopify/boardcollective/find-in-store.shopify.boardcollective.prod.js" async></script>
+            <div
+              id="brauz-find-in-store-config-product-page"
+              data-sd="{{ shop.permanent_domain }}"
+              data-cvi="{{ product.first_available_variant.id }}"
+              data-hodv="{{ product.has_only_default_variant }}"
+              style="display: none; width: 0;"
+            ></div>
             {%- endif -%}
 
           {%- if section.settings.description_below_add_to_cart -%}
